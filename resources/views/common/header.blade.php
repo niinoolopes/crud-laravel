@@ -16,8 +16,28 @@
   
 <body>
 
-<header class="container-lg mb-2 mb-md-0">
-header
-</header>
+  <header class="container-lg mb-2 mb-md-0">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <a class="navbar-brand" href="{{ route('usuario.lista') }}">
+        <i class="fas fa-user-friends mr-1"></i>
+        <span>Base de Usuário</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ route('usuario.lista') }}">Lista <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Analise</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
   <div class="container-lg d-flex flex-wrap">
