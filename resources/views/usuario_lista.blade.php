@@ -17,8 +17,9 @@
           <th scope="row">{{$usuario->USUARIO_ID}}</th>
           <td>{{$usuario->USUARIO_NOME}}</td>
           <td>{{$usuario->USUARIO_SOBRENOME}}</td>
-          <td>{{$usuario->USUARIO_DATA_NASCIMENTO}}</td>
-          <td>{{$usuario->USUARIO_SEXO == 'M' ? 'Masculino' : 'Femenino'}}</td>
+          <td>{{ date('d/m/Y', strtotime($usuario->USUARIO_DATA_NASCIMENTO)) }}</td>
+          <td>{{$usuario->USUARIO_SEXO == 'M' ? 'Masculino' : 'Feminino'}}</td>
+          
           <td>
             <a href="{{ route('usuario.edit', [ 'id' => $usuario->USUARIO_ID ]) }}" class="d-flex justify-content-center align-items-center">
               <button class="btn btn-sm border-0 py-0">
