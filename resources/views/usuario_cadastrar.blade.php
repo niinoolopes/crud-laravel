@@ -39,11 +39,10 @@
         </div>
       </div>
     </div>
-
     
-    <button type="submit" class="btn btn-sm btn-outline-primary">Salvar</button>
+    <button type="submit" class="btn btn-sm btn-outline-primary py-0">Salvar</button>
     @if($action == 'edit')
-    <a class="btn btn-sm btn-outline-danger" href="{{ $form_delete }}">Excluir</a>
+    <a class="btn btn-sm btn-outline-danger py-0" href="{{ $form_delete }}">Excluir</a>
     @endif
   </form>
 

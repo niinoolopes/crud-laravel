@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\UsuarioModel;
+use Illuminate\Support\Facades\Route;
 
 class Usuario extends Controller
 {
@@ -14,6 +15,8 @@ class Usuario extends Controller
     {
         $this->usuarioModel = new UsuarioModel;
         $this->data['sidebar'] = 'usuario_sidebar';
+        $this->data['sidebar_text'] = 'Usuário';
+        $this->data['routeName'] = Route::currentRouteName();
     }
 
     public function lista() {
@@ -22,7 +25,7 @@ class Usuario extends Controller
 
         $this->data['main'] = 'usuario_lista';
 
-        return view('usuario', $this->data);
+        return view('layout.default', $this->data);
     }
 
     public function add() {
@@ -31,7 +34,7 @@ class Usuario extends Controller
 
         $this->data['main'] = 'usuario_cadastrar';
         
-        return view('usuario', $this->data);
+        return view('layout.default', $this->data);
     }
 
     public function edit($id = false) {
@@ -42,7 +45,7 @@ class Usuario extends Controller
 
         $this->data['main'] = 'usuario_cadastrar';
 
-        return view('usuario', $this->data);
+        return view('layout.default', $this->data);
     }
 
     public function store(Request $request) {
