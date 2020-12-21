@@ -1,4 +1,4 @@
-<section class="p-2 p-md-3 border shadow bg-white">
+<section class="p-2 p-md-3 border shadow bg-white overflow-auto">
   <table class="table table-sm table-hover">
     <thead>
       <tr>
