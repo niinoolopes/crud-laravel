@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Route;
 
 class Usuario extends Controller
 {
-
     private $data = [];
 
     function __construct()

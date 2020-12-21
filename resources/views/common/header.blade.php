@@ -17,7 +17,7 @@
     <title>Teste Laravel</title>
 
     <script>
-      var path = {{ url('') }}
+      var path = "{{ url('') }}"
     </script>
   </head>
   
