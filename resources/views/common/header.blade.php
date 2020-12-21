@@ -11,7 +11,14 @@
     <link rel="stylesheet" href="{{ url('/node_modules/bootstrap/dist/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ url('/public/assets/geral.css') }}">
     
+    {{-- jquery --}}
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
     <title>Teste Laravel</title>
+
+    <script>
+      var path = {{ url('') }}
+    </script>
   </head>
   
 <body>
@@ -29,12 +36,15 @@
 
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="{{ route('usuario.lista') }}">Lista <span class="sr-only">(current)</span></a>
+
+          <li class="nav-item {{ $routeName == 'usuario.lista' ? 'active' : 'bb' }}">
+            <a class="nav-link" href="{{ route('usuario.lista') }}">Lista</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Analise</a>
+
+          <li class="nav-item {{ $routeName == 'analise' ? 'active' : 'bb' }}">
+            <a class="nav-link" href="{{ route('analise') }}">Analise</a>
           </li>
+
         </ul>
       </div>
     </nav>

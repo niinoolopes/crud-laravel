@@ -9,6 +9,8 @@
     </div>
   </footer>
 
-</body>
+  <script src="{{ url('/node_modules/bootstrap/dist/js/bootstrap.js') }}"></script>
+  <script src="{{ url('/public/assets/geral.js') }}"></script>
 
+</body>
 </html>
